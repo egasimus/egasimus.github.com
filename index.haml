@@ -1,8 +1,19 @@
 <!doctype html>
 %html{:lang => "en"}
     %head
-        %meta{:charset => "UTF-8"}
-    %title
-        Document
+        %meta{:charset=>"UTF-8"}
+        %meta{:"http-equiv"=>"X-UA-Compatible",:content=>"IE=edge"}
+        %title egasimus :: web engineer
+        %meta{:name=>"description",
+              :content=>"Personal portfolio of Adam Avramov."}
+        %meta{:name=>"viewport",
+              :content=>"width=device-width, initial-scale=1"}
+        %link{:rel=>"stylesheet", :href=>"css/style.css"}
 
     %body
+        .header
+            .logo{:"aria-label"=>"egasimus: the one-man web army"}
+            .call-to-action
+                I will soon be available for freelance work.
+                %a.button{:href=>"mailto:fallenblood@gmail.com"}
+                    Contact me
