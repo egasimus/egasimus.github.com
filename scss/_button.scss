@@ -1,0 +1,20 @@
+.button {
+    display: inline-block;
+    padding: $u;
+    background: $color-primary;
+    color: white;
+    text-shadow: 0 1px 6px $color-shadow;
+    text-decoration: none;
+}
+
+.call-to-action {
+    color: $color-black-light;
+    margin-top: $u*2;
+    text-align: center;
+    font-family: $font-headings;
+    font-size: 1.5rem;
+    .button {
+        margin-left: $u/2;
+        margin-top: $u/2;
+    }
+}

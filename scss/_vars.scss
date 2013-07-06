@@ -1,0 +1,49 @@
+/*
+    Base units of space and time.
+*/
+
+$u: 24px;
+$t: 1s;
+
+
+/*
+    Font sizes.
+*/
+
+$h1: 10rem;
+$h2: 2.5rem;
+$h3: 2rem;
+$h4: 1.5rem;
+$h5: 1rem;
+$h6: 0.875rem;
+
+
+/*
+    Font stacks and font roles.
+*/
+
+$font-1: Open Sans, Segoe UI, Verdana, Arial, sans-serif;
+$font-2: ChunkFive, Georgia, serif;
+
+$font-body: $font-1;
+$font-headings: $font-2;
+
+
+/*
+    Colors and color roles.
+*/
+
+$color-white: #fff;
+$color-white-dark: #ddd;
+$color-gray-light: #ddd;
+$color-gray: #888;
+$color-gray-dark: #444;
+$color-black-light: #222;
+$color-black: #000;
+
+$color-primary: #ee0000;
+$color-shadow: rgba(0, 0, 0, 0.2);
+
+$color-text: $color-gray-dark;
+$color-bg-body: $color-white-dark;
+
