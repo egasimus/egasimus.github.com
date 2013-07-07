@@ -496,8 +496,14 @@ h1, h2, h3, h4, h5, h6 {
   font-family: ChunkFive, Georgia, serif;
   font-size: 1.5rem;
 }
-/* line 16, ../scss/_button.scss */
+/* line 17, ../scss/_button.scss */
 .call-to-action .button {
   margin-left: 12px;
   margin-top: 12px;
+}
+@media screen and (max-width: 768px) {
+  /* line 17, ../scss/_button.scss */
+  .call-to-action .button {
+    display: block;
+  }
 }
