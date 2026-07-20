@@ -34,10 +34,13 @@
       body { width: 100%; min-height: 100%; color: #111; margin: 0 1rem }
       .page { margin: 1rem auto; display: flex; flex-flow: row nowrap; justify-content: center }
       .history { margin: 0 1rem 0 0; padding: 0; }
-      .card { transition: 1s all ease-in-out; transform: rotate(-1.66deg) translateY(0.5rem) translateX(0.5rem); transform-style: preserve-3d; background: #eee; padding: 1.5rem; margin: 0 auto 1rem; border-radius: 0.25rem; width: 35rem; height: 20rem; display: flex; flex-flow: column nowrap; align-items: center; justify-content: center; box-shadow: 0 3px 6px #0003 }
+      .card { color: #333; transition: 1s all ease-in-out; transform: rotate(-1.66deg) translateY(0.5rem) translateX(0.5rem); transform-style: preserve-3d; background: #eee; padding: 0 1.5rem; margin: 0 auto 1rem; border-radius: 0.25rem; width: 35rem; height: 20rem; display: flex; flex-flow: column nowrap; align-items: center; justify-content: center; box-shadow: 0 3px 6px #0003 }
       .card ul { display: flex; flex-flow: row wrap; font-size: 0.875rem; gap: 0.5rem; justify-content: space-between; }
       .card li { display: flex; flex-flow: column nowrap; align-items: flex-start; }
       .card li strong { font-size: 0.75rem }
+      .intro { max-width: 60ch; }
+      .intro h1 { margin-top: 2.5rem; }
+      .intro ul { list-style: none; padding: 0; margin: 3.33rem 0 0 }
       footer { max-width: 60ch; margin: 1rem auto; padding: 0 2rem 0.5rem; line-height: 1.5 }
       p { margin: 0 0 0.5rem; }
       table { margin: 1rem 2rem; border-collapse: collapse }
@@ -51,12 +54,10 @@
       td:nth-child(3) { font-size: 16px; min-width: 20ch; max-width: 36ch; }
       td:nth-child(3) ul { list-style: none; padding: 0; margin: 0 }
       td:nth-child(3) li { margin: 0 0 0.66rem;  }
-      h1 { margin: 0; font-size: 1.66rem }
-      h2 { font-weight: normal; font-size: 1.33rem; }
+      h1 { margin: 0; font-size: 1.875rem; }
+      h2 { font-weight: normal; font-size: 1.33rem; margin: 0.5rem 0 0  }
       ul { margin: 0.5rem 0 }
       li { margin: 0.25rem 0 }
-      .intro { max-width: 60ch; }
-      .intro ul { list-style: none; padding: 0; margin-bottom: 1rem }
       .devicon-typescript-plain.colored { box-shadow: 1px 1px 0 #333 }
       .devicon-javascript-plain.colored { background: #333; box-shadow: 1px 1px 0 #333 }
       .devicon-c-original.colored, .devicon-python-plain.colored { filter: drop-shadow(1px 1px 0 #333) }
@@ -129,25 +130,25 @@
             <td>
               <p>Zero-to-one greenfield projects with <a href="https://rust-lang.org/">Rust</a>, <a href="https://webassembly.org/index.html">WebAssembly</a>, and <a href="https://www.typescriptlang.org/">TypeScript</a>.</p>
               <p>Built and maintained <a href="https://nixos.org/">NixOS</a>-based <a href="https://en.wikipedia.org/wiki/Infrastructure_as_code">IaC</a> stack of self-hosted internal applications.</p>
-              <p>Dockerized Next.js websites to deploy sans Vercel.</p>
-              <p>Designed in-house frameworks and tooling.</p>
+              <p>Developed CI workflow to dockerize <a href="https://nextjs.org/">Next.js</a> websites and deploy them sans Vercel.</p>
+              <p>Designed, implemented, and maintained in-house and open source frameworks, tooling, and utilities.</p>
               <!--<p>Dealt with the 2022Q2 ESM crisis: Node 16 and TypeScript simultaneously evolved in opposite directions, breaking the very ES Module-based workflows they were nudging people towards. Ubik to the rescue, generating ubiquitously usable TS/ESM/CJS packages using some AST rewriting.</p>-->
             </td>
             <td>
               <ul>
-                <li><i class="devicon-typescript-plain colored"></i> <em>Ubik</em><br>TypeScript packager for NPM.</li>
-                <li><i class="devicon-typescript-plain colored"></i> <em>Ganesha</em><br>Module loader for Node.js.</li>
-                <li><i class="devicon-typescript-plain colored"></i> <em>Fadroma</em><br>SDK-centric framework variously covering CosmWasm, Solana, Simplicity.</li>
-                <li><i class="devicon-rust-original colored"></i> <em>DAWless</em><br>TUI-based editor for the data formats of several digital musical instruments.</li>
-                <li><i class="devicon-rust-original colored"></i> <em>MPCEmu</em><br>Emulator for NEC V53 CPU, as used in vintage AKAI devices.</li>
-                <li><i class="devicon-rust-original colored"></i> <em>HFEDisk</em><br>Implementation of HFE floppy emulation format.</li>
+                <li><i class="devicon-typescript-plain colored"></i> <a href="https://github.com/egasimus/ubik"><em>Ubik</em></a><br>TypeScript packager for NPM.</li>
+                <li><i class="devicon-typescript-plain colored"></i> <a href="https://github.com/egasimus/ganesha"><em>Ganesha</em></a><br>Module loader for Node.js.</li>
+                <li><i class="devicon-typescript-plain colored"></i> <a href="https://github.com/egasimus/fadroma"><em>Fadroma</em></a><br>SDK-centric framework variously covering <a href="https://cosmwasm.com/">CosmWasm</a>, <a href="https://solana.com/docs">Solana</a>, <a href="https://docs.simplicity-lang.org/simplicityhl-reference/">Simplicity</a>.</li>
+                <li><i class="devicon-rust-original colored"></i> <a href="https://github.com/egasimus/dawless"><em>DAWless</em></a><br>TUI-based editor for the data formats of several digital musical instruments.</li>
+                <li><i class="devicon-rust-original colored"></i> <a href="https://github.com/egasimus/mpcemu"><em>MPCEmu</em></a><br>Emulator for <a href="https://elm-chan.org/docs/dev/v53_e.html">NEC V53</a> CPU, as used in the <a href="https://en.wikipedia.org/wiki/Akai_S3000XL">AKAI S3000XL</a>.</li>
+                <li><i class="devicon-rust-original colored"></i> <a href="https://github.com/egasimus/hfedisk"><em>HFEDisk</em></a><br>Rust implementation of the <a href="https://hxc2001.com/floppy_drive_emulator/HFE-file-format.html">HFE floppy emulation format</a>.</li>
               </ul>
             </td>
           </tr>
           <tr>
             <td>
               <strong>2018-2020.</strong><br>
-              Backend and mobile developer.<br>
+              Senior software engineer.<br>
               <em><a href="https://archive.is/CPAGw">Acasus</a></em><br>
             </td>
             <td>
