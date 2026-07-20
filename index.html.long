@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- hi! -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fresh off the backburner!</title>
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+    <style>
+      * { font-family: sans-serif; box-sizing: border-box }
+      html, body { width: 100%; font-size: 20px }
+      html { background-image: url("img/bg.png"); height: 100%; }
+      body { width: 100%; min-height: 100%; color: #111; margin: 0 }
+      .page { background: #eee; max-width: 90ch; margin: 1rem auto; padding: 1.5rem 2rem 0; border-radius: 0.25rem; }
+      @media screen { .page { box-shadow: 0 3px 6px #0003 } }
+      footer { max-width: 90ch; margin: 1rem auto; padding: 0 2rem 0.5rem; line-height: 1.5 }
+      p { margin: 0 0 0.5rem; }
+      table { margin: 1rem -1rem; border-collapse: collapse }
+      tr { border-top: 1px solid #888; }
+      td { vertical-align: top; padding: 0.5rem 0 0; margin: 0 }
+      td p { margin: 0 1rem 0.5rem 0.5rem; }
+      td:first-child strong:first-child { font-size: 1.2em; color: #222; }
+      td:nth-child(2) { min-width: 40ch; max-width: 60ch; }
+      td:nth-child(2) p { line-height: 1.5; font-size: 18px; }
+      td:nth-child(3) { font-size: 16px; min-width: 20ch; max-width: 36ch; }
+      td:nth-child(3) ul { list-style: none; padding: 0; margin: 0 }
+      td:nth-child(3) li { margin: 0 0 0.66rem }
+      h1 { margin: 0 0 1rem; font-weight: normal; font-size: 1.66rem }
+      ul { margin: 0.5rem 0 }
+      li { margin: 0.25rem 0 }
+      .intro { text-align: center }
+      .intro ul { list-style: none; padding: 0; margin-bottom: 1rem }
+      .devicon-typescript-plain.colored { box-shadow: 1px 1px 0 #333 }
+      .devicon-javascript-plain.colored { background: #333; box-shadow: 1px 1px 0 #333 }
+      .devicon-c-original.colored, .devicon-python-plain.colored { filter: drop-shadow(1px 1px 0 #333) }
+      .cta-host { text-align: center }
+      .cta { display: inline-block; margin: 0 auto 1rem; color: #fff; background: #4a0; padding: 0.5rem 1rem; font-weight: bold; border-radius: 0.25em; }
+      .dim { opacity: 0.65 }
+      ul.buzz { list-style: none; padding: 0; display: flex; flex-flow: row nowrap; gap: 0.5rem; font-size: 18px }
+      @media screen and (max-width: 960px) {
+        .page, footer, td { max-width: none !important }
+        tr { display: flex; flex-flow: column nowrap }
+        td { padding: 0.5rem; max-width: auto !important }
+        td p { margin: 0 0 0.5rem }
+        td p:last-child { margin-bottom: 0 }
+        td:nth-child(3) ul { display: flex; flex-flow: row wrap; gap: 0 0.5rem }
+        footer { padding: 0.5rem 1rem }
+      }
+    </style>
+  </head>
+  <body>
+
+<section class="page">
+
+<div class="intro">
+
+<h1>I am <strong>Adam Avramov</strong>, and this is what I do.</h1>
+
+<ul>
+  <li><strong>Primary email</strong> <a href="mailto:adam.b.avramov@gmail.com">adam.b.avramov@gmail.com</a></li>
+  <li><strong>Also me (now defunct?):</strong> <span class="dim">rustacean@rootshell.is</span></li>
+  <li><strong>PeoplePerHour</strong> <a href="https://pph.me/egasimus">https://pph.me/egasimus</a></li>
+  <li><strong>GitHub</strong> <a target="_blank" href="https://github.com/egasimus">https://github.com/egasimus</a></li>
+  <li><strong>LinkedIn?</strong> Nah.</li>
+</ul>
+
+</div>
+
+<table>
+  <tr>
+    <td>
+      <strong>2021-2026.</strong>
+      Platform coordinator.<br>
+      <em><a href="https://archive.is/lR2Ua">Hack.bg</a></em><br>
+    </td>
+    <td>
+      <p>Returning from Switzerland during COVID to be with family, I took a brief hiatus before landing a job with Hack.bg, a consultancy in the distributed ledger space.</p>
+      <p>There, I built out a NixOS-based stack of self-hosted internal applications; shipped client projects with Rust, WebAssembly, TypeScript, and Next.js; and designed in-house frameworks and tooling.</p>
+      <p>A highlight was dealing with the 2022Q2 ESM crisis: Node 16 and TypeScript simultaneously evolved in opposite directions, breaking the simplest of ESM-based workflows right as I was trying to publish a SDK to NPM. Ubik to the rescue, generating ubiquitously usable TS/ESM/CJS packages using some AST rewriting.</p>
+    </td>
+    <td>
+      <ul>
+        <li><i class="devicon-typescript-plain colored"></i> <strong>Ubik</strong><br>TypeScript packager for NPM.</li>
+        <li><i class="devicon-typescript-plain colored"></i> <strong>Ganesha</strong><br>Module loader for Node.js.</li>
+        <li><i class="devicon-typescript-plain colored"></i> <strong>Fadroma</strong><br>SDK-centric framework variously covering CosmWasm, Solana, Simplicity.</li>
+        <li><i class="devicon-rust-original colored"></i> <strong>DAWless</strong><br>TUI-based editor for the data formats of several digital musical instruments.</li>
+        <li><i class="devicon-rust-original colored"></i> <strong>MPCEmu</strong><br>Emulator for NEC V53 CPU, as used in vintage AKAI devices.</li>
+        <li><i class="devicon-rust-original colored"></i> <strong>HFEDisk</strong><br>Implementation of HFE floppy emulation format.</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <strong>2018-2020.</strong><br>
+      Backend and mobile dev.<br>
+      <em><a href="https://archive.is/CPAGw">Acasus</a></em><br>
+    </td>
+    <td>
+      <p>As a core member of a lean product team, I worked alongside some of the most talented young professionals I’ve met to build the next generation of data intelligence solutions for monitoring health and education reforms in the Third World.</p>
+      <p>I got proficient with React and React Native and built a custom ETL pipeline made out of microservices running on Kubernetes and Google Cloud Platform and publishing data to BigQuery – with an eye out for compatibility with a legacy app built on Firebase.</p>
+      <p>The real technical highlight of this job, however, was brushing up on my skills with Bash to make the whole Kubernetes development experience more palatable; in my free time I focused on getting up to speed with Rust and migrating from Arch (Antergos) to NixOS.</p>
+    </td>
+    <td>
+      <ul>
+        <li><i class="devicon-javascript-plain colored"></i> <strong>Redux Helper</strong><br>Making React Redux less repetitive.</li>
+        <li><i class="devicon-javascript-plain colored"></i> <strong>Redux-Xstate Helper</strong><br>Making it easier to use React Redux with Xstate finite-state machines.</li>
+        <li><i class="devicon-javascript-plain colored"></i> <strong>Node LUKS Suspend</strong><br>Script to lock your encrypted disk partitions on suspend.</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <strong>2017-2018.</strong><br>
+      Full-stack dev.<br>
+      <em><a href="https://archive.is/lhFmY">AII Data Processing</a><em><br>
+    </td>
+    <td>
+      <p>At ADP, I was involved in building full-stack solutions for business intelligence: services for data collection, processing, and aggregation (Elasticsearch, PostgreSQL, Python 3, Django), working alongside a machine learning team to present their insights in the form of fluent single-page applications (ES6, Webpack, Vue.js, D3.js).</p>
+      <p>I spearheaded the adoption of verifiable development workflows based on continuous integration and test-driven development, using Docker-based portable environments and GitLab CI.</p>
+    </td>
+    <td>
+      <ul>
+        <li><i class="devicon-javascript-plain colored"></i> <strong>DotHot</strong><br>Hot reloading for CommonJS.</li>
+        <li><i class="devicon-cplusplus-plain colored"></i> <strong>PAVUControl-Vertical</strong><br>Modification for common Linux volume mixer.</li>
+        <li><i class="devicon-nixos-plain colored"></i> <strong>Rabbits</strong><br>Nix package for <a href="https://100r.co">100r.co</a>.</li>
+        <li><i class="devicon-nixos-plain colored"></i> <strong>Arcan-Nix</strong><br>Nix package for <a href="https://arcan-fe.com/">Arcan</a>.</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <strong>2016-2017.</strong><br>
+      Web dev.<br>
+      <em>Freelance.</em><br>
+    </td>
+    <td>
+      <p>After 3 action-packed years at LL, I went back to freelance work in order to diversify my skillset, advance my career prospects, and generally lay out a solid foundation for my future life. Node.js became my go-to backend platform, Docker my trusty Swiss-army knife, and Vue.js my preferred front-end framework.</p>
+      <p>However, the market was catching up: small-time freelancing couldn’t keep me on top of the game much longer. Having weathered a particularly difficult spell in late 2017, I gladly accepted a full-time role at a local company.</p>
+    </td>
+    <td>
+      <ul>
+        <li><i class="devicon-javascript-plain colored"></i> <strong>Bataka</strong><br>A live-editable shared forum environment, in the tradition of old-school imageboards.</li>
+        <li><i class="devicon-javascript-plain colored"></i> <strong>Glagol</strong><br>Explorations in live coding with HTML5/ES5.</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <strong>2014-2016.</strong><br>
+      Python/JS dev.<br>
+      <em><a href="https://archive.is/u8bIQ">Lounge Logic</a></em><br>
+    </td>
+    <td>
+      <p>With the Web dev market booming, the stack getting more complex, and the old-school “webmaster” role fragmenting into a continuum between design, frontend, backend, and devops (that would soon begin to speak mutually incomprehensible languages), I had to wear multiple hats and remain focused on the big picture, while juggling multiple projects targeting the UK broadcasting industry.</p>
+      <p>Used advanced Python and JavaScript to build CMSes and multimedia experiences on platforms ranging from HTML5-enabled Smart TVs and set-top boxes to the more traditional desktop and mobile browsers. Got domain expertise in HLS encrypted video playback, cross-platform video with Video.js, video transcoding on AWS Elastic Transcoder, ad display and tracking using VAST XML, mobile applications with Cordova (including writing a small custom Android plugin in Java).</p>
+      <p>In my free time, I experimented with Clojure and Haskell (finding the former more accessible, but being turned off by the JVM dependency) and brushed up on my Linux administration skills, and even wrote a bit of C for real-time audio applications with JACK2.</p>
+    </td>
+    <td>
+      <ul>
+        <li><i class="devicon-c-original colored"></i> <strong>Postmelodic</strong><br> An audio sample slicer controlled by OSC.</li>
+        <li><i class="devicon-haskell-plain colored"></i> <strong>XMonad-EqualSpacing</strong><br>A more balanced look for the classic tilling X11 manager.</li>
+        <li><i class="devicon-javascript-plain colored"></i> <strong>Yo, Django!</strong><br>Yeoman generator for Django boilerplate.</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <strong>2012-2013.</strong>
+      PHP/Python dev.<br>
+      Technical writer.<br>
+      <em>Freelance.</em><br><br>
+      Student.<br>
+      <em>MU-Varna</em><br>
+    </td>
+    <td>
+  	  <p>Thanks to companies such as Freelancer.com, Envato, and PeoplePerHour, I went all the way from
+      implementing PHP theme tweaks, to writing front-end tutorials, to building a custom CRM system
+      for a Gibraltarian asset management firm with Django on MySQL; while simultaneously studying at the
+      Medical University of Varna, and experimenting with DIY music, video editing, and book publishing.</p>
+
+      <p>My nascent software career got the best of that – one particularly lucrative freelance gig actually evolved into a full-time job. As for med school? I didn't even intend to enroll there, anyway!</p>
+    </td>
+    <td>
+      <ul>
+        <li><i class="devicon-python-plain colored"></i> <strong>Django CBV Factory</strong><br>Metaclass that generates class-based views.</li>
+        <li><i class="devicon-python-plain colored"></i> <strong>Django Multistep Select</strong><br>Multi-step select component for Django forms.</li>
+        <li><i class="devicon-jquery-plain colored"></i> <strong>jQuery Sticky Navbar</strong><br>A tutorial on how to cleanly accomplish this much-maligned effect.</li>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <strong>2011-2012.</strong><br>
+      PHP dev.<br>
+      “IT guy”.<br>
+      <em>MyBGAgent<em>
+    </td>
+    <td>
+      <p>
+        Recapped motherboard to bring XP workstation back to life.
+        Optimized OpenCart-based backoffice to make data entry less of a chore.
+        Convinced management to let me upgrade their website to Web 2.0 sensibilities.
+      </p>
+
+      <p>This led to the development of an advanced customer-facing search engine with PHP, hand-crafted SQL queries, jQuery, and SVG. It was live until relatively recently.</p>
+    </td>
+    <td>
+      <ul>
+        <li><i class="devicon-php-plain colored"></i> <strong>Real Estate Search</strong><br>It was snappy, beautiful, and would outlast my tenure there. I think it outlasted the agency itself!</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <strong>2011.</strong><br>Graduation!<br><em>MG-Varna</em>
+    </td>
+    <td>
+      <p>My first Web page dates from even earlier; but it was around 2009 that I was trying out GUI development with Python+GTK2 under Ubuntu.</p>
+      <p>Meanwhile the “intensive CS curriculum” of my high school turned out to be little more than a token introduction to abstract OOP principles in C++; and then the same thing in Java all over again. Go figure.</p>
+      <p>Facing disillusionment with the local education system, and with my family unable to afford sending me to study abroad, I elected not to pursue a degree, but to immediately enter the job market.</p>
+    </td>
+    <td>
+      <ul>
+        <li><i class="devicon-cplusplus-plain colored"></i> <strong>Local Galactic Group</strong><br>A starmap and N-body simulation. My first foray into OpenGL!</li>
+      </ul>
+    </td>
+  </tr>
+</table>
+
+</section>
+
+<footer>
+
+<p>The above adds up to <strong>over 15 years of hands-on experience,</strong> developing cutting-edge Web services and solutions in accordance with our rapidly developing industry’s constantly shifting best practices.</p>
+
+<p><strong>My core strength? Culture,</strong> which enables me to outpace framework churn by intuitively making those technical choices which suggest greatest long-term viability.</p>
+
+<p>You’ve already seen that I learn on my feet but keep my mind focused on the big picture.</p>
+
+<p>My methodical approach, my inquisitive mindset, and my deep belief in the humane and creative aspects of computing, empower me to solve any task thrown at me.</p>
+
+<p>I am independent and self-directed, yet also an efficient team-player. I strive to always communicate in a clear and positive manner, and am happiest as part of an opinionated, engineer-driven organization with a clear mission statement.</p>
+
+<p class="cta-host">So, don't hesitate ⸻ <a class="cta" href="mailto:adam.b.avramov@gmail.com">Email me!</a></p>
+
+<p><strong>Attention: and now for some buzzwords!</strong> Here is an incomplete list of seas I have sailed, or at least dipped in.
+If your stack features any of those technologies, it will be easier to jump right in:</p>
+
+<ul class="buzz">
+  <li><strong>Frontend/UI:</strong> JavaScript (ES5, ES6, TypeScript), Vite, Webpack, Babel, Browserify, Vue, React, Ember, Riot, Redux, Meteor, Jade/Pug, Canvas, SVG, WebGL, THREE.js, D3.js, Cannon.js, Web Audio API, WebSockets, Stylus, SASS, Compass, LESS, PostCSS, Electron, Cordova, Adobe CS...</li>
+  <li><strong>Backend:</strong> REST, Node.js, Python (v2/v3), Rust, Pytest, Django, Flask, SQLAlchemy, Scrapy, PHP, Apache, Nginx, MySQL, PostgreSQL, MongoDB, Elasticsearch, Redis, Memcached...</li>
+  <li><strong>Infrastructure:</strong> VPS, AWS, Azure, GCP, Debian, Ubuntu, CentOS, CoreOS, Arch, openSUSE, NixOS, Synapse, Docker, Podman, Buildah, Kubernetes, Vagrant, Packer…</li>
+</ul>
+
+<p>I've probably missed some, and am always looking to add more to that list!</p>
+
+</footer>
+
+  </body>
+</html>
