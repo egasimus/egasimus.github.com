@@ -10,7 +10,7 @@
       @font-face {
         font-family: 'Lora';
         font-style: normal;
-        font-weight: 400 700;
+        font-weight: 400 500;
         font-display: swap;
         src: url(./fonts/static/Lora-Regular.ttf);
       }
@@ -31,15 +31,22 @@
       * { font-family: Lora, serif; box-sizing: border-box }
       html, body { width: 100%; font-size: 20px }
       html { background-image: url("img/bg.png"); height: 100%; }
-      body { width: 100%; min-height: 100%; color: #111; margin: 0 1rem }
+      body { width: 100%; min-height: 100%; color: #111; margin: 0 }
       .page { margin: 1rem auto; display: flex; flex-flow: row nowrap; justify-content: center }
       .history { margin: 0 1rem 0 0; padding: 0; }
-      .card { color: #333; transition: 1s all ease-in-out; transform: rotate(-1.66deg) translateY(0.5rem) translateX(0.5rem); transform-style: preserve-3d; background: #eee; padding: 0 1.5rem; margin: 0 auto 1rem; border-radius: 0.25rem; width: 35rem; height: 20rem; display: flex; flex-flow: column nowrap; align-items: center; justify-content: center; box-shadow: 0 3px 6px #0003 }
+      .card { transition: 1s all ease-in-out; transform: rotate(-1.66deg) translateY(0.5rem) translateX(0.5rem); transform-style: preserve-3d; }
+      .card { color: #333; background: #eee; padding: 0 1.5rem; margin: 0 auto 1rem; border-radius: 0.25rem; width: 33rem; height: 18.85rem; }
+      .card, .card-section { display: flex; flex-flow: column nowrap; align-items: center; justify-content: center }
+      .card { border: 1px solid #999; box-shadow: 0 2px 6px #0003 }
+      .card:before { position: absolute; inset: 0.66rem; content: ' '; border: 1px solid #3332; pointer-events: none; border-radius: 0.125rem; }
+      .card:after { position: absolute; inset: 1.5rem; content: ' '; border: 1px solid #3331; pointer-events: none; border-radius: 0.1rem; }
       .card ul { display: flex; flex-flow: row wrap; font-size: 0.875rem; gap: 0.5rem; justify-content: space-between; }
       .card li { display: flex; flex-flow: column nowrap; align-items: flex-start; }
       .card li strong { font-size: 0.75rem }
       .intro { max-width: 60ch; }
-      .intro h1 { margin-top: 2.5rem; }
+      .intro h1 { margin-top: 0.5rem; }
+      .intro h2 { font-size: 1.28rem; margin: 1.25rem 0; }
+      .intro h3 { margin: 0.25rem; font-size: 1rem; font-weight: normal }
       .intro ul { list-style: none; padding: 0; margin: 3.33rem 0 0 }
       footer { max-width: 60ch; margin: 1rem auto; padding: 0 2rem 0.5rem; line-height: 1.5 }
       p { margin: 0 0 0.5rem; }
@@ -83,6 +90,23 @@
         td:nth-child(3) ul { display: flex; flex-flow: row wrap; gap: 0 0.5rem }
         footer { padding: 0.5rem 1rem }
       }
+      @media print {
+        a[href] { color: #333 !important; text-decoration: none !important; border-bottom: 1px dotted #888 !important }
+        html, body { background: none !important; margin: 0 !important; padding: 0 !important }
+        body { display: flex !important; flex-flow: column nowrap !important; align-items: center !important }
+        .page { flex-flow: column nowrap !important; align-items: stretch !important; margin: 0 auto !important }
+        .intro, .history { display: flex !important; flex-flow: column nowrap !important; align-items: stretch !important; max-width: none !important; margin: 0 !important }
+        .intro { padding: 1rem 2rem 0 !important }
+        .card { border: none !important; padding: 0 !important; box-shadow: none !important; transform: none !important; height: auto !important; background: none !important; width: 100% !important; }
+        .card { display: flex !important; flex-flow: row nowrap !important; justify-content: space-between !important; align-items: flex-start !important }
+        .card:before, .card:after { content: none !important; }
+        .card h1, .card h2 { margin: 0 !important }
+        .card h3 { margin: 0.33rem 0 0 !important }
+        .card-section:first-child { align-items: flex-start !important }
+        .card-section:last-child { align-items: flex-end !important }
+        td.projects { display: none !important; visibility: hidden !important }
+        strong { font-weight: bold !important }
+      }
     </style>
   </head>
   <body>
@@ -92,13 +116,15 @@
       <div class="intro">
 
         <div class="card">
-          <h1>Adam B. Avramov</h1>
-          <h2><em>Full-stack Software Engineer</em></h2>
-          <ul>
-            <li><strong>Primary email</strong> <a href="mailto:adam.b.avramov@gmail.com">adam.b.avramov@gmail.com</a></li>
-            <li><strong>Follow me on GitHub</strong> <a target="_blank" href="https://github.com/egasimus">https://github.com/egasimus</a></li>
-            <li><strong>Degoogled email</strong> <a href="mailto:rustacean@rootshell.is">rustacean@rootshell.is</a></li>
-            <li><strong>Hire me on PeoplePerHour</strong> <a href="https://pph.me/egasimus">https://pph.me/egasimus</a></li>
+          <div class="card-section">
+            <h1>Adam B. Avramov</h1>
+            <h2><em>Full-stack Software Engineer</em></h2>
+          </div>
+          <div class="card-section">
+            <h3><a href="mailto:adam.b.avramov@gmail.com">adam.b.avramov@gmail.com</a></h3>
+            <h3><a target="_blank" href="https://github.com/egasimus">https://github.com/egasimus</a></h3>
+            <h3><a href="https://pph.me/egasimus">https://pph.me/egasimus</a></h3>
+          </div>
           </ul>
           <!--<p class="cta-host">So, don't hesitate ⸻ <a class="cta" href="mailto:adam.b.avramov@gmail.com">Email me!</a></p>-->
         </div>
@@ -124,7 +150,7 @@
         <table>
           <tr>
             <td>
-              <strong>2021-2026.</strong><br>
+              <strong>2021&#8209;2026.</strong><br>
               Platform coordinator.<br>
               <em><a href="https://archive.is/lR2Ua">Hack.bg</a></em><br>
             </td>
@@ -132,14 +158,15 @@
               <p><strong>Built and maintained <a href="https://nixos.org/">NixOS</a>-based <a href="https://en.wikipedia.org/wiki/Infrastructure_as_code">IaC</a> stack</strong> of self-hosted internal applications.</p>
               <p>Zero-to-one greenfielding with <a href="https://rust-lang.org/">Rust</a>, <a href="https://webassembly.org/index.html">WebAssembly</a>, and <a href="https://www.typescriptlang.org/">TypeScript</a>.</p>
               <p>Developed CI workflow to dockerize <a href="https://nextjs.org/">Next.js</a> websites and deploy them <a href="https://vercel.com/"><em>sans</em> Vercel lock-in</a>.</p>
-              <p>Designed, implemented, and maintained in-house and open source frameworks, tooling, and utilities (<a href="https://262.ecma-international.org/">ECMAScript</a>, <a href="https://deno.com/">Deno</a>).</p>
+              <p>Designed, implemented, and maintained open source and in-house frameworks, tooling, and utilities (<a href="https://262.ecma-international.org/">ECMAScript</a>, <a href="https://deno.com/">Deno</a>).</p>
               <!--<p>Dealt with the 2022Q2 ESM crisis: Node 16 and TypeScript simultaneously evolved in opposite directions, breaking the very ES Module-based workflows they were nudging people towards. Ubik to the rescue, generating ubiquitously usable TS/ESM/CJS packages using some AST rewriting.</p>-->
             </td>
-            <td>
+            <td class="projects">
               <ul>
                 <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" /> <a href="https://github.com/egasimus/ubik"><em>Ubik</em></a><br>TypeScript packager for NPM.</li>
                 <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" /> <a href="https://github.com/egasimus/ganesha"><em>Ganesha</em></a><br>Module loader for Node.js.</li>
                 <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" /> <a href="https://github.com/egasimus/fadroma"><em>Fadroma</em></a><br>SDK-centric framework variously covering <a href="https://cosmwasm.com/">CosmWasm</a>, <a href="https://solana.com/docs">Solana</a>, <a href="https://docs.simplicity-lang.org/simplicityhl-reference/">Simplicity</a>.</li>
+                <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" /> <a href="https://github.com/hackbg/undexer"><em>Undexer</em></a><br>Indexing service for <a href="https://namada.net/">Namada</a>.</li>
                 <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/rust/rust-original.svg" /> <a href="https://github.com/egasimus/dawless"><em>DAWless</em></a><br>TUI-based editor for the data formats of several digital musical instruments.</li>
                 <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/rust/rust-original.svg" /> <a href="https://github.com/egasimus/mpcemu"><em>MPCEmu</em></a><br>Emulator for <a href="https://elm-chan.org/docs/dev/v53_e.html">NEC V53</a> CPU, as used in the <a href="https://en.wikipedia.org/wiki/Akai_S3000XL">AKAI S3000XL</a>.</li>
                 <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/rust/rust-original.svg" /> <a href="https://github.com/egasimus/hfedisk"><em>HFEDisk</em></a><br>Rust implementation of the <a href="https://hxc2001.com/floppy_drive_emulator/HFE-file-format.html">HFE floppy emulation format</a>.</li>
@@ -148,17 +175,17 @@
           </tr>
           <tr>
             <td>
-              <strong>2018-2020.</strong><br>
+              <strong>2018&#8209;2020.</strong><br>
               Senior software engineer.<br>
               <em><a href="https://archive.is/CPAGw">Acasus</a></em><br>
             </td>
             <td>
-              <p><strong>Core contributor to data intelligence platform</strong> for health and education monitoring.</p>
+              <p><strong>Core contributor to monitoring platform</strong> empowering health and education reforms in developing countries.</p>
               <p>Built <a href="https://kubernetes.io/">Kubernetes</a>-centric <a href="https://en.wikipedia.org/wiki/Extract,_transform,_load">ETL</a> pipeline on <a href="https://docs.cloud.google.com">Google Cloud Platform</a> to ingest data into <a href="https://docs.cloud.google.com/bigquery/docs/introduction">BigQuery</a>.</p>
               <p>Optimized performance of endpoint apps (<a href="https://react.dev/">React</a>, <a href="https://reactnative.dev/">React Native</a>).</p>
               <p>Bridged process gaps using <a href="https://www.gnu.org/software/bash/">Bash</a> and <a href="https://nodejs.org/en">Node.js</a> scripting.</p>
             </td>
-            <td>
+            <td class="projects">
               <ul>
                 <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" /> <a href="https://github.com/egasimus/redux-helper/"><em>Redux Helper</em></a><br>Making React Redux less onerous.</li>
                 <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" /> <a href="https://github.com/egasimus/redux-xstate-helper/"><em>Redux-Xstate Helper</em></a><br>Making it easier to use React Redux with Xstate finite-state machines.</li>
@@ -169,7 +196,7 @@
           </tr>
           <tr>
             <td>
-              <strong>2017-2018.</strong><br>
+              <strong>2017&#8209;2018.</strong><br>
               Full-stack developer.<br>
               <em><a href="https://archive.is/lhFmY">AII Data Processing</a><em><br>
             </td>
@@ -178,7 +205,7 @@
               <p>Greenfield SPA (<a href="https://262.ecma-international.org/6.0/'>ES6</a>, <a href="https://webpack.js.org/">Webpack</a>, <a href="https://vuejs.org/'>Vue.js</a>, <a href="https://d3js.org/">D3.js</a>) to expose data insights from ADP's pioneering ML R&D team.</p>
               <p>Contributed to full-stack BI solutions: services for data collection, processing, and aggregation (<a href="https://www.elastic.co/elasticsearch">Elasticsearch</a>, <a href="https://www.postgresql.org/">PostgreSQL</a>, <a href="https://www.python.org/downloads/">Python 3</a>, <a href="https://www.djangoproject.com/">Django</a>).</p>
             </td>
-            <td>
+            <td class="projects">
               <ul>
                 <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" /> <a href="https://github.com/egasimus/dothot/"><em>DotHot</em></a><br>Hot reloading for <a href="https://wiki.commonjs.org/wiki/CommonJS">CommonJS</a>.</li>
                 <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg" /> <a href="https://github.com/egasimus/pavucontrol-vertical/"><em>PAVUControl-Vertical</em></a><br>Modification of the popular Linux volume mixer.</li>
@@ -190,16 +217,16 @@
           </tr>
           <tr>
             <td>
-              <strong>2016-2017.</strong><br>
+              <strong>2016&#8209;2017.</strong><br>
               Web developer.<br>
               <em>Freelance.</em><br>
             </td>
             <td>
-              <p><strong>Chilled.</strong> Contributed to client projects of moderate significance.</p>
+              <p><strong>Chilled.</strong> Enjoyed earnings. Contributed to client projects of moderate significance.</p>
               <p>Wrote an experimental piece of live-editable forum software (<a href="https://nodejs.org/en">Node.js</a>, <a href="https://vuejs.org/">Vue.js</a>, <a href="https://www.docker.com/">Docker</a>).</p>
               <p>Toured the continent by hitch-hike, train, and ferry. Learned about how different people live.</p>
             </td>
-            <td>
+            <td class="projects">
               <ul>
                 <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" /> <a href="https://github.com/egasimus/glagol/"><em>Glagol</em></a><br>Exploratory live coding environment with <a href="https://html.spec.whatwg.org/multipage/">HTML5</a>/<a href="https://262.ecma-international.org/5.1/">ES5</a>.</li>
                 <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" /> <a href="https://github.com/egasimus/bataka/"><em>Bataka</em></a><br>A live-editable shared forum environment in the venerable tradition of anonymous forums.</li>
@@ -208,24 +235,23 @@
           </tr>
           <tr>
             <td>
-              <strong>2014-2016.</strong><br>
+              <strong>2014&#8209;2016.</strong><br>
               Python/JS developer.<br>
               <em><a href="https://archive.is/u8bIQ">Lounge Logic</a></em><br>
             </td>
             <td>
-              <p><strong>Point man for digital transformation projects and multimedia experiences</strong> targeting the UK broadcasting industry:</p>
+              <p><strong>Ran point for digital experience projects</strong> targeting the UK broadcasting industry:</p>
               <ul>
-                <li>Custom CMS backend platform for major British broadcaster.</li>
-                <li>Media library system for <a href="https://docs.djangoproject.com/en/6.0/ref/contrib/admin/">Django Admin</a>.</li>
-                <li>Preroll plugin for <a href="https://videojs.org/">Video.js</a> with <a href="https://interactiveadvertisingbureau.github.io/vast/">VAST XML</a>.</li>
-                <li>Video transcoding system on <a href="https://aws.amazon.com/elastictranscoder/details/">AWS Elastic Transcoder</a>.</li>
+                <li>Rolled out CMS backend for major British broadcaster based on extensively customized <a href="https://docs.djangoproject.com/en/6.0/ref/contrib/admin/">Django Admin</a>, featuring scratch-built media library system.</li>
+                <li>Developed preroll plugin for <a href="https://videojs.org/">Video.js</a> with <a href="https://interactiveadvertisingbureau.github.io/vast/">VAST XML</a>.</li>
+                <li>Deployed video transcoding system on <a href="https://aws.amazon.com/elastictranscoder/details/">AWS Elastic Transcoder</a>.</li>
                 <li>Platform engineering for smart TVs (<a href="https://www.lg.com/us/webos">LG WebOS</a>, <a href="https://www.tizen.org/">Samsung Tizen</a>), set-top boxes (<a href="https://www.roku.com/">Roku</a>, <a href="https://www.youview.com/">YouView</a>), and the Amazon Kindle File (with <a href="https://cordova.apache.org/">Apache Cordova</a>).</li>
               </ul>
               <p>Experimented with Clojure and Haskell for live coding.</p>
               <p>Wrote a bit of C for real-time audio applications with JACK2.</p>
               <p>Gained Linux administration skills.</p>
             </td>
-            <td>
+            <td class="projects">
               <ul>
                 <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/c/c-original.svg" /> <a href="https://github.com/egasimus/postmelodic/"><em>Postmelodic</em></a><br> Rhythmic sound slicer controlled by <a href="https://opensoundcontrol.stanford.edu/index.html">OSC</a>.</li>
                 <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/haskell/haskell-original.svg" /> <a href="https://github.com/egasimus/xmonad-equalspacing/"><em>XMonad-EqualSpacing</em></a><br>A more balanced look for the classic <a href="https://en.wikipedia.org/wiki/Tiling_window_manager">tiling window manager</a> for <a href="https://en.wikipedia.org/wiki/X_Window_System">X11</a>.</li>
@@ -235,7 +261,7 @@
           </tr>
           <tr>
             <td>
-              <strong>2012-2013.</strong><br>
+              <strong>2012&#8209;2013.</strong><br>
               PHP/Python developer.<br>
               Technical writer.<br>
               <em>Freelance.</em><br><br>
@@ -248,7 +274,7 @@
               <p>Experimented with DIY multimedia production and book publishing (<a href="https://www.reaper.fm/">REAPER</a>, <a href="https://en.wikipedia.org/wiki/Adobe_Creative_Suite">Adobe CS6</a>).</p>
               <p>Quit med school to pursue software career.</p>
             </td>
-            <td>
+            <td class="projects">
               <ul>
                 <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" /> <a href="https://github.com/egasimus/django-cbv-factory/"><em>Django CBV Factory</em></a><br>Metaclass that generates class-based views.</li>
                 <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" /> <a href="https://github.com/egasimus/django-multistep-select/"><em>Django Multistep Select</em></a><br>Multi-step select component for Django forms.</li>
@@ -257,7 +283,7 @@
           </tr>
           <tr>
             <td>
-              <strong>2011-2012.</strong><br>
+              <strong>2011&#8209;2012.</strong><br>
               Admin and PHP developer.<br>
               <em>MyBGAgent Real Estate<em>
             </td>
@@ -268,7 +294,7 @@
               <p>Upgraded agency website to Web 2.0 sensibilities.</p>
               <p>Revived a workstation by recapping a motherboard!</p>
             </td>
-            <td>
+            <td class="projects">
               <ul>
                 <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg" /> <em>Real Estate Search</em><br>Snappy, beautiful, and built to last.</li>
               </ul>
@@ -283,9 +309,9 @@
               <p>N-body astrophysical simulation (<a href="https://isocpp.org/">C++</a>, <a href="https://www.opengl.org/">OpenGL</a>).</p>
               <p>First forays into Web development.</p>
             </td>
-            <td>
+            <td class="projects">
               <ul>
-                <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg" /> <em>Local Galactic Group</em><br>A starmap and N-body simulation. My first foray into OpenGL!</li>
+                <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg" /> <em>Local Galactic Group</em><br>An intergalactic starmap.</li>
               </ul>
             </td>
           </tr>
